@@ -69,6 +69,11 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: 'Museo Moderno';
+	src: url('../../fonts/MuseoModerno-Medium.ttf');
+}
+
 * {
   font-family: $museo-sans-cyrl;
 }
