@@ -75,4 +75,20 @@
       }
     }
   }
+  .consultation {
+    min-height: 580px;
+    padding: 80px 10px 108px 10px;
+    .title {
+      font-size: 17px;
+    }
+    &__descr {
+      font-size: 13px;
+    }
+    form {
+      width: 250px;
+      button {
+        font-size: 14px;
+      }
+    }
+  }
 }
