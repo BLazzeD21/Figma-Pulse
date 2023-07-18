@@ -6,6 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0px;
+    padding-left: 0px;
   }
   &__tab {
     width: 223px;
@@ -20,6 +22,11 @@
     margin: 0 5px;
     transform: skew(-30deg);
     cursor: pointer;
+    transition: 0.5s all;
+    &:hover {
+      box-shadow: 3px 3px 20px $main-color;
+      border: none
+    }
     div {
       transform: skew(30deg);
     }
