@@ -1,2 +1,7 @@
-// @media screen and (max-width: 319px) {
-// }
+@media screen and (max-width: 319px) {
+  .slider {
+    &__inner {
+      width: 250px;
+    }
+  }
+}
