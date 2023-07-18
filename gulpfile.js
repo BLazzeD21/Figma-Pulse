@@ -1,26 +1,26 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync");
 const sass = require("gulp-sass")(require("sass"));
-const rename = require("gulp-rename");
-const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
+const autoprefixer = require("gulp-autoprefixer");
+const rename = require("gulp-rename");
 
-// Static server
 gulp.task("server", function() {
-  browserSync.init({
+  browserSync({
     server: {
       baseDir: "src",
+      notify: false,
+      online: true,
     },
   });
+
+  gulp.watch("src/*.html").on("change", browserSync.reload);
 });
 
 gulp.task("styles", function() {
-  return gulp.src("src/sass/**/*.+(sass|scss)")
-    .pipe(sass.sync({outputStyle: "compressed"}).on("error", sass.logError))
-    .pipe(rename({
-      prefix: "",
-      suffix: ".min",
-    }))
+  return gulp.src("src/sass/**/*.+(scss|sass)")
+    .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
+    .pipe(rename({suffix: ".min", prefix: ""}))
     .pipe(autoprefixer())
     .pipe(cleanCSS({compatibility: "ie8"}))
     .pipe(gulp.dest("src/css"))
@@ -28,9 +28,7 @@ gulp.task("styles", function() {
 });
 
 gulp.task("watch", function() {
-  gulp.watch("src/sass/**/*.+(sass|scss)", gulp.parallel("styles"));
-  gulp.watch("src/*.html").on("change", browserSync.reload);
+  gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel("styles"));
 });
 
-gulp.task("default", gulp.parallel("styles", "watch", "server"));
-gulp.task("start", gulp.parallel("styles", "watch", "server"));
+gulp.task("default", gulp.parallel("watch", "server", "styles"));
