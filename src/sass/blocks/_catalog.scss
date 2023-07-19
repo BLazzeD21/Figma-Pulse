@@ -38,6 +38,10 @@
   }
   &__content {
     margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: wrap;
+
   }
   &-item {
     width: 300px;
@@ -46,6 +50,7 @@
     background-color: #FFF;
     padding: 20px 20px 26px 20px;
     overflow: hidden;
+    margin-bottom: 20px;
     &__img {
       display: block;
       margin: 0 auto;
@@ -144,6 +149,22 @@
           left: -14px;
           top: 9px;
         }
+      }
+    }
+    &__back {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(calc(-50% - 19px));
+      display: block;
+      color: $main-color;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: underline;
+      text-transform: uppercase;
+      &:hover {
+        color: $main-color;
+        text-decoration: none;
       }
     }
   }
