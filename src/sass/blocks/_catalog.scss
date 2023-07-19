@@ -38,10 +38,13 @@
   }
   &__content {
     margin-top: 60px;
-    display: flex;
+    display: none;
+
     justify-content: space-between;
     font-weight: wrap;
-
+    &_active {
+      display: flex;
+    }
   }
   &-item {
     width: 300px;
