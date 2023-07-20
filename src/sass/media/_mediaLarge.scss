@@ -14,5 +14,15 @@
   }
   .catalog__content {   
     justify-content: space-around;
-}
+  }
+  .reviews {
+    margin: 0 15px;
+    &-item {
+      &__img {
+        img{
+          height: 140px;
+        }
+      }
+    }
+  }
 }

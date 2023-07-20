@@ -126,4 +126,31 @@
   .title_black {
     font-size: 20px;
   }
+  .catalog {
+    padding-bottom: 40px;
+  }
+  .reviews {
+    margin: 0 15px;
+    &-item {
+      flex-direction: column;
+      align-items: center;
+      &__img {
+        display: block;
+        margin: 0 auto;
+      }
+      &__content {
+        margin-top: 30px;
+        width: 300px;
+      }
+      &__name, &__stats {
+        text-align: center;
+      }
+      &__text {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
 }

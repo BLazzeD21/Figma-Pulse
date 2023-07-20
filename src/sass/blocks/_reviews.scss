@@ -5,7 +5,11 @@
     margin-top: 60px;
     justify-content: space-between;
     &__img {
-      height: 169px;
+      margin-right: 61px;
+      img{
+        height: 169px;
+      }
+      
     }
     &__content {
       width: 686px;
