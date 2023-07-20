@@ -81,4 +81,15 @@
       width: 400px;
     }
   }
+  .catalog {
+    &__tab {
+      width: 165px;
+      height: 37px;
+      line-height: 36px;
+      font-size: 15px;
+    }
+    &-item {
+      width: 280px;
+    }
+  }
 }

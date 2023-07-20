@@ -96,4 +96,34 @@
       width: 300px;
     }
   }
+  .catalog {
+    &-item {
+      &__old-price {
+        font-size: 12px;
+      }
+      &__price {
+        font-size: 16px;
+      }
+      &__footer {
+        .button {
+          &_mini {
+            width: 111px;
+            height: 35px;
+            font-size: 13px;
+            line-height: 35px;
+          }
+        }
+      }
+    }  
+    &__tabs {
+      flex-direction: column;
+    }
+    &__tab {
+      width: 250px;
+      margin: 5px 0;
+    }
+  }
+  .title_black {
+    font-size: 20px;
+  }
 }
