@@ -13,7 +13,7 @@ module.exports = {
     'indent': ['warn', 2],
     'eol-last': 'warn',
     'no-unused-vars': 'warn',
-    'quotes': ['warn', "double"],
+    'quotes': ['warn', "single"],
     'linebreak-style': ['error', 'windows'],
   },
 };
