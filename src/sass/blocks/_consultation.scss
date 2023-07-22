@@ -7,4 +7,16 @@
     font-size: 20px;
     font-weight: 500;
   }
+  #consultation-form {
+      .validate {
+        margin-bottom: 10px;
+        border: 1px solid red;
+      }
+      label.validate {
+        color: white;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+      }
+  }
 }

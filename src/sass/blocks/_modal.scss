@@ -40,6 +40,17 @@
     font-size: 14px;
     font-weight: 700;
   }
+  .feed-form {
+    .validate {
+      margin-bottom: 10px;
+      border: 1px solid red;
+    }
+    label.validate {
+      border: none;
+      text-align: center;
+      font-size: 13px;
+    }
+  }
 }
 
 #consultation, #order, #thanks {
