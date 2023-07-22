@@ -52,4 +52,26 @@
       }
     }
   }
+
+  .modal {
+    width: 210px;
+    padding: 19px 15px 15px 15px;
+    &__subtitle {
+      font-size: 12px;
+    }
+    &__descr {
+      font-size: 10px;
+    }
+    .feed-form {
+      width: 180px;
+      input {
+        height: 34px;
+        font-size: 11px;
+      }
+      button {
+        height: 34px;
+        font-size: 11px;
+      }
+    }
+  }
 }
