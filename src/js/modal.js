@@ -11,6 +11,12 @@ $(document).ready(function() {
       $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     });
 
+  $(document).on('keyup', function(e) {
+    if ( e.key == 'Escape' ) {
+      $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    }
+  });
+
   $('.button_mini').each(function(i) {
     $(this).on('click', function() {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
@@ -18,3 +24,4 @@ $(document).ready(function() {
     });
   });
 });
+
