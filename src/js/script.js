@@ -44,4 +44,24 @@ $(document).ready(function() {
 
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
+
+
+  $('form').submit(function(e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: 'post',
+      url: 'mailer/smart.php',
+      data: $(this).serialize(),
+    }).done(function() {
+      $(this).find('input').value('');
+
+      $('form').trigger('reset');
+    });
+    return false;
+  });
 });
