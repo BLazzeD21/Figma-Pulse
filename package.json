@@ -33,5 +33,8 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0"
+  }
 }
