@@ -23,7 +23,7 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min', prefix: ''}))
     .pipe(autoprefixer())
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
 
@@ -35,35 +35,30 @@ gulp.task('watch', function() {
 gulp.task('html', function() {
   return gulp.src('src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('scripts', function() {
   return gulp.src('src/js/**/*.js')
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('fonts', function() {
   return gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('icons', function() {
   return gulp.src('src/icons/**/*')
-    .pipe(gulp.dest('dist/icons'));
-});
-
-gulp.task('mailer', function() {
-  return gulp.src('src/mailer/**/*')
-    .pipe(gulp.dest('dist/mailer'));
+    .pipe(gulp.dest('build/icons'));
 });
 
 gulp.task('imges', function() {
   return gulp.src('src/img/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('default', gulp.parallel('watch',
   'server', 'styles', 'scripts',
-  'fonts', 'icons', 'mailer', 'imges', 'html'));
+  'fonts', 'icons', 'imges', 'html'));
