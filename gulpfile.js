@@ -59,10 +59,10 @@ gulp.task('imges', function() {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('start', gulp.parallel('watch',
-  'server', 'styles', 'scripts',
+gulp.task('start', gulp.parallel(
+  'watch', 'server', 'styles', 'scripts',
   'fonts', 'icons', 'imges', 'html'));
 
 gulp.task('build', gulp.parallel(
-  'styles', 'scripts','fonts',
+  'styles', 'scripts', 'fonts',
   'icons', 'imges', 'html'));
