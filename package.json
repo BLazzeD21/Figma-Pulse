@@ -4,7 +4,8 @@
   "description": "RunSmart",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "dev": "gulp start",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
